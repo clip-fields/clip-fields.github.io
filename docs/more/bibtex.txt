@@ -1,0 +1,6 @@
+@article{anonymous2023clipfields,
+  title   = {CLIP-Fields: Weakly Supervised Semantic Fields for Robotic Memory},
+  author  = {Anonymous Submission},
+  year    = {2023},
+  journal = {RSS 2023}
+}
