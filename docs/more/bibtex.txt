@@ -1,6 +1,6 @@
-@article{anonymous2023clipfields,
+@article{shafiullah2022clipfields,
   title   = {CLIP-Fields: Weakly Supervised Semantic Fields for Robotic Memory},
-  author  = {Anonymous Submission},
-  year    = {2023},
-  journal = {RSS 2023}
+  author  = {Nur Muhammad Mahi Shafiullah and Chris Paxton and Lerrel Pinto and Soumith Chintala and Arthur Szlam},
+  year    = {2022},
+  journal = {arXiv preprint arXiv: Arxiv-2210.05663}
 }

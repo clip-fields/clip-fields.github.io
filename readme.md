@@ -1,7 +1,9 @@
 # CLIP-Fields: Weakly Supervised Semantic Fields for Robotic Memory
 ### Teaching robots in the real world to respond to natural language queries with zero human labels — using pretrained large language models (LLMs), visual language models (VLMs), and neural fields.
 
-Authors: Anonymized for review 
+[[Paper]](https://arxiv.org/abs/2210.05663) [[Website]](https://mahis.life/clip-fields/) [[Code]](https://github.com/notmahi/clip-fields) [[Data]](https://osf.io/famgv) [[Video]](https://youtu.be/bKu7GvRiSQU)
+
+Authors: [Mahi Shafiullah](https://mahis.life), [Chris Paxton](https://cpaxton.github.io/), [Lerrel Pinto](https://lerrelpinto.com), [Soumith Chintala](https://soumith.ch), Arthur Szlam.
 
 https://user-images.githubusercontent.com/3000253/195213301-43eae6e8-4516-4b8d-98e7-633c607c6616.mp4
 
@@ -12,8 +14,8 @@ To properly install this repo and all the dependencies, follow these instruction
 
 ```
 # Clone this repo.
-git clone --recursive https://github.com/clip-fields/clip-fields.github.io
-cd clip-fields.github.io
+git clone --recursive https://github.com/notmahi/clip-fields
+cd clip-fields
 
 # Create conda environment and install the dependencies.
 conda create -n cf python=3.8
@@ -30,19 +32,19 @@ python setup.py install
 cd ..
 ```
 ## Interactive Tutorial and Evaluation
-We have an interactive tutorial and evaluation notebook that you can use to explore the model and evaluate it on your own data. You can find them in the [`demo/`](https://github.com/clip-fields/clip-fields.github.io/tree/main/demo) directory, that you can run after installing the dependencies.
+We have an interactive tutorial and evaluation notebook that you can use to explore the model and evaluate it on your own data. You can find them in the [`demo/`](https://github.com/notmahi/clip-fields/tree/main/demo) directory, that you can run after installing the dependencies.
 
 ## Training a CLIP-Field directly
-Once you have the dependencies installed, you can run the training script `train.py` with any [.r3d](https://record3d.app/) files that you have! If you just want to try out a sample, download some [sample data](https://osf.io/cevkz/?view_only=5ae43aa8c4fd48c89be9963ee89283e1) `data.r3d` freely available online and run the following command.
+Once you have the dependencies installed, you can run the training script `train.py` with any [.r3d](https://record3d.app/) files that you have! If you just want to try out a sample, download the [sample data](https://osf.io/famgv) `nyu.r3d` and run the following command.
 
 ```
-python train.py dataset_path=data.r3d
+python train.py dataset_path=nyu.r3d
 ```
 
 If you want to use LSeg as an additional source of open-label annotations, you should download the [LSeg demo model](https://github.com/isl-org/lang-seg#-try-demo-now) and place it in the `path_to_LSeg/checkpoints/demo_e200.ckpt`. Then, you can run the following command.
 
 ```
-python train.py dataset_path=data.r3d use_lseg=true
+python train.py dataset_path=nyu.r3d use_lseg=true
 ```
 
 You can check out the `config/train.yaml` for a list of possible configuration options. In particular, if you want to train with any particular set of labels, you can specify them in the `custom_labels` field in `config/train.yaml`.
@@ -55,3 +57,4 @@ We would like to thank the following projects for making their code and models a
 * [Torch NGP](https://github.com/ashawkey/torch-ngp) with [MIT License](https://github.com/ashawkey/torch-ngp/blob/main/LICENSE)
 * [LSeg](https://github.com/isl-org/lang-seg) with [MIT License](https://github.com/isl-org/lang-seg/blob/main/LICENSE)
 * [Sentence BERT](https://www.sbert.net/) with [Apache License 2.0](https://github.com/UKPLab/sentence-transformers/blob/master/LICENSE)
+
